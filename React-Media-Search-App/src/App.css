@@ -1,0 +1,35 @@
+.masonry { /* Masonry container */
+  column-count: 4;
+  column-gap: 1em;
+}
+.masonry-video-audio{
+  column-count: 2;
+  column-gap: 1em
+}
+
+.item { /* Masonry bricks or child elements */
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+.image-thumbnail{
+    /* padding: .25rem; */
+    margin: 0.5em 0em;
+    background-color: #fff;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+audio{
+  margin:50px;
+  outline:none;
+}
+.v-t{
+  vertical-align: top;
+}
+video{
+  border-radius: 1em;
+  width: inherit;
+  outline:none;
+}

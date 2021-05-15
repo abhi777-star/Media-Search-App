@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <style>
+        body{
+            background: #67be4b;
+        }
+        .flex{
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            flex-flow: column;
+            gap: 5em;
+        }
+        .login{
+            margin: 0 auto;
+            background: white;
+            text-align: center;
+            padding: 2em;
+            border-radius: 2px;
+            box-shadow: 0px 2px 11px -2px black;
+        }
+        input{
+            font-weight: 800;
+            border-radius: 2px;
+            background: #f2f2f2;
+            margin: 15px;
+            outline: none;
+            padding: 15px 20px;
+            width: 20em;
+            border: none;
+            font-size: 15px;
+            font-family: monospace;
+            color: grey;
+        }
+        input[type=submit]{
+            background: #00b242;
+            font-weight: 800;
+            color: white;
+            width: -webkit-fill-available;
+        }
+        .alert{
+            display: inline-block;
+            margin: 0 auto;
+            width: 25em;
+            user-select: none;
+            border-radius: 10px;
+            padding: 0 15px;
+            box-shadow: 0px 5px 20px -6px black;
+            transition: all 0.5s ease-in-out;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .alert-body{
+            text-align: center;
+        }
+        .alert-msg{
+            font-size: 1.5em;
+            padding: 10px 15px;
+            font-family: monospace;
+        }
+        .success{
+            background: lightgreen;
+            color: darkgreen;
+            /* box-shadow: 0px 5px 20px -6px lightgreen; */
+        }
+        .error{
+            background: lightcoral;
+            color: darkred;
+            /* box-shadow: 0px 5px 20px -6px lightcoral; */
+        }
+        .info{
+            background: lightgoldenrodyellow;
+            color: darkorange;
+            /* box-shadow: 0px 5px 20px -6px lightgoldenrodyellow; */
+        }
+        .fade-in{
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <main class="flex">
+        <div class="alert success">
+            <div class="alert-body">
+                <p class="alert-msg">Hello this is the error msg</p>
+            </div>
+        </div>
+        <form class="login">
+            <div><input type="text" name="username" placeholder="Username"></div>
+            <div><input type="password" name="password" placeholder="Password"></div>
+            <div><input type="submit" value="Login"></div>
+        </form>
+    </main>
+    <script>
+        window.addEventListener('load',e=>{
+            console.log('hello');
+            setTimeout(ele=>{
+                document.querySelector('.alert').classList.add('fade-in');
+            },1000);
+            setTimeout(ele=>{
+                document.querySelector('.alert').classList.remove('fade-in');
+            },5000)
+        });
+    </script>
+</body>
+</html>
